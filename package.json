@@ -1,0 +1,17 @@
+{
+  "name": "honey",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "pug": "^3.0.2",
+    "vite": "^2.7.2",
+    "vite-plugin-pug": "^0.3.0"
+  },
+  "dependencies": {
+    "sass": "^1.45.1"
+  }
+}
