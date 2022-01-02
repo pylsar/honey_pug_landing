@@ -4,14 +4,9 @@ main
         .container 
             nav.main__navigation-list
                 ul.main__navigation__list 
-                    li.main__navigation__item 
-                        a(href="#home").main__navigation__link Home
-                    li.main__navigation__item 
-                        a(href="#about").main__navigation__link About
-                    li.main__navigation__item 
-                        a(href="#product").main__navigation__link Our Product
-                    li.main__navigation__item 
-                        a(href="#contact").main__navigation__link Contact  
+                    each val in [{title: 'Home', url: '#home'},{title: 'About', url: '#about'}, {title: 'Our Product', url: '#product'},{title: 'Contact ', url: '#contact'}]
+                        li.main__navigation__item
+                            a(href=`${val.url}`).main__navigation__link= val.title
 
     section.shop
         h2 Our Trusted Shops 
@@ -44,18 +39,14 @@ main
                 h3 Does your honey taste bad? Try us!
                 p Honey is one of the prime ingredients in your everyday food schedule. As a brand, you need a marketing strategy that will help...
                 button Learn More 
-    section.products             
-        .product    
-            .product__left
-                h4 Eucalyptus Honey	
-                p It has the scent of lavender, medium sweetness lavender scented, and has a medium amber color.
-                button Buy Now
-            .product__right 
-                img(src="#", alt="")    
-        .product    
-            .product__left
-                h4 Basswood Honey
-                p Basswood is a tree native and abundant in Wisconsin, which is also known as the Linden tree.
-                button Buy Now
-            .product__right 
-                img(src="#", alt="")  
+    section.products 
+        .container 
+            each val in [{title: 'Eucalyptus Honey', color: 'Amber color', url: 'head_1.png'},{title: 'Basswood Honey', color: 'tree native', url: 'head_2.png'}]      
+                .product    
+                    .product__left
+                        h4= val.title	
+                        p= val.color
+                        button Buy Now
+                    .product__right 
+                        img(src=`./assets/images/${val.url}`, alt=`${val.url}`)  
+include pug/footer.pug
