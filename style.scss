@@ -150,6 +150,7 @@ body{
 .shop{
     & h2{
         margin-top: 70px;
+        margin-bottom: 70px;
         font-size: 100px;
     }
     &__brand-list{
@@ -165,8 +166,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     &__left{
         width: 50%;
         position: relative;
@@ -236,4 +237,44 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.products{
+    &__items{
+        width: 80vw;
+        margin: 70px auto;
+        display: flex;
+        justify-content: center;
+    }
+    & h2{
+        width: 80vw;
+        margin: 70px auto;
+    }
+}
+
+.product{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    &__left{
+        flex: 1;
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        & h4{
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        & p {
+            margin-bottom: 40px;
+        }
+        & button{
+            @include button();
+        }
+    }
 }

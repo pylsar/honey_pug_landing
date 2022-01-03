@@ -40,19 +40,21 @@ main
                 img(src="./assets/images/rectangle_1.png", alt="pic")
                 img(src="./assets/images/rectangle_2.png", alt="pic")
                 img(src="./assets/images/pic_3.png", alt="pic")
-                //- img(src="./assets/images/pic_2.png", alt="pic")
             .card__right
                 h3 Does your honey taste bad? Try us!
                 p Honey is one of the prime ingredients in your everyday food schedule. As a brand, you need a marketing strategy that will help...
                 button Learn More 
     section.products 
         .container 
-            each val in [{title: 'Eucalyptus Honey', color: 'Amber color', url: 'head_1.png'},{title: 'Basswood Honey', color: 'tree native', url: 'head_2.png'}]      
-                .product    
-                    .product__left
-                        h4= val.title	
-                        p= val.color
-                        button Buy Now
-                    .product__right 
-                        img(src=`./assets/images/${val.url}`, alt=`${val.url}`)  
+            h2 Our Products
+            .products__items
+                each val in [{title: 'Eucalyptus Honey', color: 'Amber color', url: 'honey_1.png'},{title: 'Basswood Honey', color: 'tree native', url: 'honey_2.png'}]      
+                    .product   
+                        .product__left
+                            .product__box
+                                h4= val.title	
+                                p= val.color
+                                button Buy Now
+                        .product__right 
+                            img(src=`./assets/images/${val.url}`, alt=`${val.url}`)  
 include pug/footer.pug
