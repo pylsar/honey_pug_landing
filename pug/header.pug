@@ -25,7 +25,7 @@ header.header
                 </svg>
             ul.navigation__list 
                 each val in [{title: 'Home', url: '#home'},{title: 'About', url: '#about'}, {title: 'Our Product', url: '#product'},{title: 'Contact ', url: '#contact'}]
-                    li.navigation__item
+                    li.navigation__item.cursor__links
                         a(href=`${val.url}`).navigation__link= val.title
         div.head
             .head__left 

@@ -7,7 +7,7 @@ main
             nav.main__navigation-list
                 ul.main__navigation__list 
                     each val in [{title: 'Home', url: '#home'},{title: 'About', url: '#about'}, {title: 'Our Product', url: '#product'},{title: 'Contact ', url: '#contact'}]
-                        li.main__navigation__item
+                        li.main__navigation__item.cursor__links
                             a(href=`${val.url}`).main__navigation__link= val.title
 
     section.shop

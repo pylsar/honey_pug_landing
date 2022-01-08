@@ -12,6 +12,7 @@
     "vite-plugin-pug": "^0.3.0"
   },
   "dependencies": {
+    "gsap": "^3.9.1",
     "sass": "^1.45.1"
   }
 }
