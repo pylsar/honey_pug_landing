@@ -57,30 +57,23 @@ changeCursor();
 
 
 
-// меню
-// function fixmenu(){
-//     const fixMenu = document.querySelector('.main__navigation-list');
- 
-//     function getCoords(fixMenu) {
-//         let menuTop = fixMenu.getBoundingClientRect();
-      
-//         return {
-//           top: Math.round(menuTop.top + pageYOffset),
-//           left: Math.round(menuTop.left + pageXOffset)
-//         };
-//     }
-//     getCoords(fixMenu);
+// фиксируем меню
+function fixmenu(){
+  const fixMenu = document.querySelector('.main__navigation');
+  let menuTop = fixMenu.getBoundingClientRect().top;
 
-//     window.addEventListener('scroll', () => {
-//         let menuTop = fixMenu.getBoundingClientRect();
-//         // console.log(fixMenu)
-//         if(window.scrollTop > menuTop){
-//             // fixMenu.style.color = 'green';
-//             console.log(1)
-//         }
-//     })
-// }
-// fixmenu();
+  window.addEventListener('scroll', () => {
+    const scrollY = Math.round(window.scrollY);
+    if (scrollY > menuTop){
+      // console.log(1);
+      fixMenu.classList.add('menuIsFixed');
+    }else{
+      // console.log(2)
+      fixMenu.classList.remove('menuIsFixed');
+    }
+  })
+}
+fixmenu();
 
 
 
